@@ -1,4 +1,4 @@
-var ROWS_COUNT = 5;
+var ROWS_COUNT = 4;
 
 var rows_sockets = [];
 
