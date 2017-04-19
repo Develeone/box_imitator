@@ -35,8 +35,7 @@ for (var i = 0; i < ROWS_COUNT; i++) {
 function processMessage (data, row_id) {
 	data = JSON.parse(data);
 
-	for(var i = 0; i < data.numbers_arr.length; i++) {
-	    //console.log("cell-"+row_id+"-"+i);
-		document.getElementById("cell-"+row_id+"-"+i).innerHTML = data.numbers_arr[i];
-	}
+	if (data.action == 1)
+        for(var i = 0; i < data.numbers_arr.length; i++)
+            document.getElementById("cell-"+row_id+"-"+i).innerHTML = data.numbers_arr[i];
 }
