@@ -7,16 +7,13 @@ for (var i = 0; i < ROWS_COUNT; i++) {
 
 	rows_sockets[i].row_id = i; // Устанавливаем в параметр - id стойки, чтоб в асинхронных функциях использовать
 
-	rows_sockets[i].onopen = function() {
-	    console.log("Соединение установлено.");
-	};
+	rows_sockets[i].onopen = function() { console.log("Соединение установлено."); };
 
 	rows_sockets[i].onclose = function(event) {
-	    if (event.wasClean) {
+	    if (event.wasClean)
 		    alert('Соединение закрыто корректно');
-	    } else {
+	    else
 		    alert('Обрыв соединения');
-	    }
 
 	    alert('Код: ' + event.code + ' причина: ' + event.reason);
 	};
@@ -30,7 +27,6 @@ for (var i = 0; i < ROWS_COUNT; i++) {
 	    alert("Ошибка " + error.message);
 	};
 }
-
 
 function processMessage (data, row_id) {
 	data = JSON.parse(data);
