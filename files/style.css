@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'LCDMono Light';
+	font-style: normal;
+	font-weight: 900;
+	src: local('LCDMono Light'), local('LCDMono-Light'),
+		url('lcdmono.woff') format('woff'),
+		url('lcdmono.ttf') format('truetype');
+}
+
+body {
+	background: black;
+	margin: 0;
+	padding: 0;
+}
+
+#box {
+	width: 100%;
+}
+
+.row {
+	width: 20%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	background: #966F33;
+	text-align: right;
+}
+
+.cell {
+	background: black;
+	padding: 5px;
+	margin: 15px;
+	width: 4vw;
+	color: red;
+	font-family: 'LCDMono Light', arial;
+	font-size: 2vw;
+	text-align: right;
+}
